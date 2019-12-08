@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employer Register
+	</title>
+	
+</head>	
+<body>
+	<table align="center" width="100%" border="0">
+		<tbody align="center"><tr>
+			<td>
+				<br>
+				<br>
+				<h3>New Employer Register</h3>
+					
+					<form action="ahome.php" name="f1" onsubmit="return validate()">
+						<label for="name"><b>Employer Name</b></label><br>
+						<input type="text" name="name" id="name"  value="" placeholder="Employer Name"size="35"><br>
+						<span id="namelocation" style="color:red"></span>						
+						<br><br>
+						
+						<label for="companyname"><b>Company Name</b></label><br>
+						<input type="text" name="name" id="name"  value="" placeholder="Company Name"size="35"> <br><br>
+						
+						<label for="Contact no"><b>Contact no</b></label><br>
+						<input type="text"  id="Contact no" value="" placeholder="Contact no"size="35"> <br><br>
+						
+						<label for="name"><b>User Name</b></label><br>
+						<input type="text" name="name" id="name"  value="" placeholder="User Name"size="35"><br>
+						<span id="namelocation1" style="color:red"></span>
+						<br><br>
+						<label for="password"><b>Password</b></label><br>
+						<input type="password" name="password" id="password" placeholder="Password"size="35"><br>
+						<span id="passwordlocation" style="color:red"></span>
+						<br><br>
+						
+						<input type="submit" name="submit" value="Add Employe">
+					</form>
+					
+					<br>
+		<a href="logout.php"><button style="text-align:right;">Log Out</button></a>
+				
+			</td>
+		</tr>
+		<br>
+		<a href="ahome.php">Home</a>
+		
+		
+		<html>
+
+<script type="text/javascript">  
+function validate(){
+var name= document.f1.name.value;
+
+var name=document.f1.name.value;  
+var passwordlength=document.f1.password.value.length;
+  
+var status=false;  
+if(name==""){  
+document.getElementById("namelocation").innerHTML=
+ "Name Can't be null";  
+status=false;
+}else{  
+document.getElementById("namelocation").innerHTML;  
+status=true;
+} 
+if(name==""){  
+document.getElementById("namelocation1").innerHTML=
+ "Name Can't be null";  
+status=false;
+}else{  
+document.getElementById("namelocation1").innerHTML;  
+status=true;
+}  
+  
+if(passwordlength<6){  
+document.getElementById("passwordlocation").innerHTML=  
+"  Password must be greater than 6";  
+status=false; 
+}else{  
+document.getElementById("passwordlocation").innerHTML;  
+}  
+  
+return status;  
+}  
+</script>  
+
+
+ 
+		
+	</tbody></table>
+	</body>
+</html>
